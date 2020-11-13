@@ -7,22 +7,43 @@
 本教程使用的最新文档版本为 2.8.17，下载并安装：
 
 ```shell
-wget http://download.redis.io/releases/redis-6.0.8.tar.gz 
-tar xzf redis-6.0.8.tar.gz # cd redis-6.0.8 # make
+wget http://download.redis.io/releases/redis-6.0.9.tar.gz 
+tar xzf redis-6.0.9.tar.gz  # cd redis-6.0.9.tar.gz 
+make
 ```
 
 安装gcc套装
 
-yum install cpp yum install binutils yum install glibc yum install glibc-kernheaders yum install glibc-common yum install glibc-devel yum install gcc yum install make 升级gcc
+```shell
+yum install cpp
+yum install binutils
+yum install glibc
+yum install glibc-kernheaders
+yum install glibc-common
+yum install glibc-devel
+yum install gcc
+yum install make
+```
 
-yum -y install centos-release-scl yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils scl enable devtoolset-9 bash
+升级gcc
+
+```shell
+升级gcc
+yum -y install centos-release-scl
+
+yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils
+
+scl enable devtoolset-9 bash
+```
 
 执行完 **make** 命令后，redis-6.0.8 的 **src** 目录下会出现编译后的 redis 服务程序 redis-server，还有用于测试的客户端程序 redis-cli：
 
 下面启动 redis 服务：
 
 ```shell
-cd src # ./redis-server
+cd src 
+# 
+./redis-server
 ```
 
 注意这种方式启动 redis 使用的是默认配置。也可以通过启动参数告诉 redis 使用指定配置文件使用下面命令启动。
@@ -45,5 +66,11 @@ cd src
 
 ```shell
 cd src 
-./redis-cli redis> set foo bar OK redis> get foo "bar"
+./redis-cli 
+redis> ping
+PONG
+redis> set foo bar 
+OK 
+redis> get foo 
+"bar"
 ```

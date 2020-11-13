@@ -4,7 +4,6 @@
 
 ```html
 <span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span>
-1
 ```
 
 使用时将“文字”替换为需要修改属性的文本即可
