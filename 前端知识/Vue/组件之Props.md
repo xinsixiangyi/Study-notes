@@ -51,7 +51,10 @@ props: {
 <blog-post :likes="post.likes"></blog-post>
 ```
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_6" scrolling="no" src="https://codepen.io/xinsixiangyi/pen/qBNLepe?height=300&amp;theme-id=39028&amp;default-tab=result&amp;user=Vue&amp;slug-hash=oNXaoKy&amp;editable=true&amp;pen-title=Component%20basics%3A%20dynamic%20components&amp;name=cp_embed_6" title="Component basics: dynamic components" loading="lazy" id="cp_embed_oNXaoKy" style="width: 740px; overflow: hidden; display: block;"></iframe>
+<iframe height="265" style="width: 100%;" scrolling="no" title="first vue" src="https://codepen.io/xinsixiangyi/embed/qBNLepe?height=265&theme-id=light&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/xinsixiangyi/pen/qBNLepe'>first vue</a> by xinsixiangyi
+  (<a href='https://codepen.io/xinsixiangyi'>@xinsixiangyi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ### 传入一个布尔值
 
