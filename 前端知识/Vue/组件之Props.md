@@ -74,4 +74,73 @@ props: {
   See the Pen <a href='https://codepen.io/xinsixiangyi/pen/ExyrzeV'>TWO vue</a> by xinsixiangyi
   (<a href='https://codepen.io/xinsixiangyi'>@xinsixiangyi</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+### [传入一个数组](https://cn.vuejs.org/v2/guide/components-props.html#传入一个数组)
+
+```vue
+<!-- 即便数组是静态的，我们仍然需要 `v-bind` 来告诉 Vue -->
+<!-- 这是一个 JavaScript 表达式而不是一个字符串。-->
+<blog-post v-bind:comment-ids="[234, 266, 273]"></blog-post>
+
+<!-- 用一个变量进行动态赋值。-->
+<blog-post v-bind:comment-ids="post.commentIds"></blog-post>
+```
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="three prpos vue" src="https://codepen.io/xinsixiangyi/embed/LYZaGmo?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/xinsixiangyi/pen/LYZaGmo'>three prpos vue</a> by xinsixiangyi
+  (<a href='https://codepen.io/xinsixiangyi'>@xinsixiangyi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+### [传入一个对象](https://cn.vuejs.org/v2/guide/components-props.html#传入一个对象)
+
+```vue
+<!-- 即便对象是静态的，我们仍然需要 `v-bind` 来告诉 Vue -->
+<!-- 这是一个 JavaScript 表达式而不是一个字符串。-->
+<blog-post
+  v-bind:author="{
+    name: 'Veronica',
+    company: 'Veridian Dynamics'
+  }"
+></blog-post>
+
+<!-- 用一个变量进行动态赋值。-->
+<blog-post v-bind:author="post.author"></blog-post>
+```
+
+
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="four prpos vue" src="https://codepen.io/xinsixiangyi/embed/bGeZpJm?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/xinsixiangyi/pen/bGeZpJm'>four prpos vue</a> by xinsixiangyi
+  (<a href='https://codepen.io/xinsixiangyi'>@xinsixiangyi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+### [传入一个对象的所有 property](https://cn.vuejs.org/v2/guide/components-props.html#传入一个对象的所有-property)
+
+如果你想要将一个对象的所有 property 都作为 prop 传入，你可以使用不带参数的 `v-bind` (取代 `v-bind:prop-name`)。例如，对于一个给定的对象 `post`：
+
+```js
+post: {
+  id: 1,
+  title: 'My Journey with Vue'
+}
+```
+
+下面的模板：
+
+```vue
+<blog-post v-bind="post"></blog-post>
+```
+
+等价于：
+
+```vue
+<blog-post
+  v-bind:id="post.id"
+  v-bind:title="post.title"
+></blog-post>
+```
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="five props vuue" src="https://codepen.io/xinsixiangyi/embed/OJXqXVB?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/xinsixiangyi/pen/OJXqXVB'>five props vuue</a> by xinsixiangyi
+  (<a href='https://codepen.io/xinsixiangyi'>@xinsixiangyi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
