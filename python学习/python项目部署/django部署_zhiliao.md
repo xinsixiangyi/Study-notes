@@ -571,6 +571,8 @@ server {
 2. 在项目的根目录下创建一个文件叫做`zlkt_supervisor.conf`。内容如下：
 
     ```python
+    
+    ```
 # supervisor的程序名字
 
 [program:mysite]
