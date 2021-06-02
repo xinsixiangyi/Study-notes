@@ -136,6 +136,47 @@ mod_wsgi.so版本需和python和apache的版本匹配
 
 打开setting.py将debug设置true错误信息会显示到apache的error.log文件中,否则再项目中的documents/log/mysite.log文件中查看错误
 
+##### 4.mod_wsgi版本下载：
+
+1.下载mod_wsgi Python的插件 http://www.lfd.uci.edu/~gohlke/pythonlibs/#mod_wsgi
+
+如 mod_wsgi‑4.5.15+ap24vc14‑cp36‑cp36m‑win_amd64.whl
+
+ i. 这个插件对应的Apache版本是24 VC是14
+
+ ii. Python版本是3.6
+
+ iii. 64位系统
+
+在下载时要选择相应的版本，否则Apache启动时会有问题
+
+2. 下载后后缀名改为.zip进行解压，但是解压后找不到mod_wsgi.so文件
+
+3.把下载的.whl文件复制到python\Scripts下使用
+
+```shell
+pip3 install "mod_wsgi-4.5.15+ap24vc14-cp36-cp36m-win_amd64.whl"
+```
+
+
+进行安装在安装成功后在python的安装目录的\scripts文件夹下运行
+
+```shell
+#如是虚拟环境需要多加执行这个命令
+activate
+mod_wsgi-express module-config
+```
+
+输出如下三行结果
+
+```powershell
+mod_wsgi-express module-config
+LoadModule wsgi_module "c:/soft/python/virtualenv/python3/lib/site-packages/mod_wsgi/server/mod_wsgi.cp36-win_amd64.pyd"
+WSGIPythonHome "c:/soft/python/virtualenv/python3"
+```
+
+
+
 ## 二、apache安装https服务
 
  
