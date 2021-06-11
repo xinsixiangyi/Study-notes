@@ -208,7 +208,7 @@ if __name__ == '__main__':
 
 client客户端
 
-```
+```python
 import socket
 s = socket.socket()
 s.connect(('127.0.0.1',8080))
@@ -220,3 +220,35 @@ while True:
     data = s.recv(1024)
     print(data.decode('utf-8'))
 ```
+
+### futures线程池
+
+```python
+
+from concurrent.futures import ThreadPoolExecutor
+import time
+
+def sayhello(a):
+	if a=="a":
+		time.sleep(2)
+		print("hello: " + a)
+	if a == "b":
+		time.sleep(5)
+		print("hello: " + a)
+	if a == "c":
+		time.sleep(6)
+		print("hello: " + a)
+
+def main():
+	seed=["a","b","c"]
+	start2=time.time()
+	with ThreadPoolExecutor(5) as executor:
+		print 1231241235141
+		executor.submit(sayhello,"a")
+		print str(time.time()).split('.')[0]
+		executor.submit(sayhello, "b")
+		print 324324324
+	end2=time.time()
+	print("time2: "+str(end2-start2))
+```
+
