@@ -120,9 +120,9 @@ STATIC_ROOT=os.path.join[BASE_DIR,static_dist]
 
 ### **安装uwsgi**
 
-\1. uwsgi是一个应用服务器，非静态文件的网络请求就必须通过他完成，他也可以充当静态文件服务器，但不是他的强项。uwsgi是使用python编写的，因此通过`pip install uwsgi`就可以了。(uwsgi必须安装在系统级别的Python环境中，不要安装到虚拟环境中)。
+1. uwsgi是一个应用服务器，非静态文件的网络请求就必须通过他完成，他也可以充当静态文件服务器，但不是他的强项。uwsgi是使用python编写的，因此通过`pip install uwsgi`就可以了。(uwsgi必须安装在系统级别的Python环境中，不要安装到虚拟环境中)。
 
-\2. 使用命令`uwsgi --http :8000 --module 项目名称.wsgi --vritualenv=/root/.virtualenvs/django-env-py2`。用`uwsgi`启动项目，如果能够在浏览器中访问到这个页面，说明`uwsgi`可以加载项目了。
+2. 使用命令`uwsgi --http :8000 --module 项目名称.wsgi --vritualenv=/root/.virtualenvs/django-env-py2`。用`uwsgi`启动项目，如果能够在浏览器中访问到这个页面，说明`uwsgi`可以加载项目了。
 
 ### 编写uwsgi配置文件：
 
